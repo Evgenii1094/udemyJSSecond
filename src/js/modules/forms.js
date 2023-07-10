@@ -3,6 +3,7 @@ import { postData } from "../services/requests";
 const forms = () => {
     const form = document.querySelectorAll('form'),
           inputs = document.querySelectorAll('input'),
+          selects = document.querySelectorAll('select'),
           upload = document.querySelectorAll('[name="upload"]');
 
     // checkNumInputs('input[name="user_phone"]');
@@ -23,6 +24,9 @@ const forms = () => {
 
     const clearInputs = () => {
         inputs.forEach(item => {
+            item.value = '';
+        });
+        selects.forEach(item => {
             item.value = '';
         });
         upload.forEach(item => {
